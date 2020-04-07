@@ -26,7 +26,7 @@
   win_power_plan:
     name: "{{ windows_common_win_power_plan }}"
 
-- name: Ensure DNS is set to {{ windows_common_win_dns_client_ipv4_addresses }} on the adapter named {{ windows_common_win_dns_client_adapter_names }}
+- name: Ensure upstream DNS servers are set on the adapter named {{ windows_common_win_dns_client_adapter_names }}
   win_dns_client:
    adapter_names: "{{ windows_common_win_dns_client_adapter_names }}"
    ipv4_addresses: "{{ windows_common_win_dns_client_ipv4_addresses }}"

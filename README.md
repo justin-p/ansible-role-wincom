@@ -5,12 +5,13 @@ This role helps simplifying some basis common tasks for a windows host deploymen
 Works on
 
 - Server 2019
-
-Not tested (yet) on:
-
 - Server 2016
 - Server 2012R2
 - Server 2012
+
+Not tested (yet) on:
+
+
 - Server 2008R2
 - Server 2008-x64
 - Server 2008-x86
@@ -32,6 +33,7 @@ If you want to change any variables overwrite the ones listed in `vars/main.yml`
 | wincom_service_delayed           | [WinRM, NlaSvc]                     |
 | wincom_required_psmodule         | [xPSDesiredStateConfiguration, NetworkingDsc, ComputerManagementDsc] |
 | wincom_power_plan                | "high performance"                  |
+| wincom_dns_nics                  | "Ethernet"                          |
 | wincom_dns_server                | [8.8.8.8, 8.8.4.4]                  |
 | wincom_hostname                  | "{{ inventory_hostname }}"          |
 
