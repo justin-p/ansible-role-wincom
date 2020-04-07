@@ -1,0 +1,10 @@
+galaxy_info:
+  role_name: wincom
+  author: Justin Perdok
+  description: This role helps simplifying some basis common tasks for a windows host deployment.
+  company: Orange Cyberdefense
+  license: MIT
+  min_ansible_version: 2.9
+  galaxy_tags: ["windows", "common"]
+dependencies: 
+  - justin_p.posh5

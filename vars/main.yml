@@ -1,0 +1,9 @@
+---
+# vars file for configure-lab/win-common
+wincom_choco_packages: [BGInfo]
+wincom_service_delayed: [WinRM, NlaSvc]
+wincom_required_psmodule: [xPSDesiredStateConfiguration, NetworkingDsc, ComputerManagementDsc]
+wincom_power_plan: "high performance"
+wincom_dns_servers: [8.8.8.8, 8.8.4.4]
+wincom_dns_nics: Ethernet
+wincom_hostname: "{{ inventory_hostname }}"
