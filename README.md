@@ -23,9 +23,6 @@ Not tested (yet) on:
 
 ## Role Variables
 
-All variables listed in `default/main.yml` reference variables from `vars/main.yml`.  
-If you want to change any variables overwrite the ones listed in `vars/main.yml`.
-
 ### `vars/main.yml`
 
 | Variable                         | Default value                       |
