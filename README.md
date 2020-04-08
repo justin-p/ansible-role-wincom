@@ -23,7 +23,7 @@ Not tested (yet) on:
 
 ## Role Variables
 
-### `vars/main.yml`
+### `defaults/main.yml`
 
 | Variable                         | Default value                       |
 |:---------------------------------|:------------------------------------|
