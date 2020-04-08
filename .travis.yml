@@ -24,9 +24,17 @@ install:
   # Install requirements
   - ansible-galaxy install justin_p.posh5
 
+  # Install ansible-lint
+  - pip install ansible-lint
+   
+  # Check ansible list version
+  - ansible-lint --version
+  
 script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/travis-inventory --syntax-check
 
+  # Linting
+  - ansible-lint .
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
