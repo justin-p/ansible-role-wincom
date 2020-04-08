@@ -39,7 +39,8 @@ If you want to change any variables overwrite the ones listed in `vars/main.yml`
 
 ## Dependencies
 
-WinRM on the windows host should configured for Ansible.
+- WinRM on the windows host should configured for Ansible.
+- justin_p.posh5
 
 ## Example Playbook
 
