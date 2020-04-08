@@ -3,37 +3,37 @@
 - name: Assert mandatory variables have been set
   assert: { that: "{{ item }} is defined" }
   with_items:
-    - windows_common_win_psmodule_required
-    - windows_common_win_service_delayed_required
-    - windows_common_win_power_plan
-    - windows_common_win_dns_client_adapter_names
-    - windows_common_win_dns_client_ipv4_addresses
-    - windows_common_win_hostname_name
+    - wincom_required_psmodule
+    - wincom_service_delayed
+    - wincom_power_plan
+    - wincom_dns_nics
+    - wincom_dns_servers
+    - wincom_hostname
 
 - name: Ensure that required DSC resources and Powershell Modules are present
   win_psmodule:
     name: "{{ item }}"
     state: present
-  with_items: "{{ windows_common_win_psmodule_required }}"
+  with_items: "{{ wincom_required_psmodule }}"
 
 - name: Ensure that required services are set to start when the system has settled
   win_service:
     name: WinRM
     start_mode: delayed
-  with_items: "{{ windows_common_win_service_delayed_required }}"
+  with_items: "{{ wincom_service_delayed }}"
 
-- name: Ensure we use the {{ windows_common_win_power_plan }} power plan
+- name: Ensure we use the {{ wincom_power_plan }} power plan
   win_power_plan:
-    name: "{{ windows_common_win_power_plan }}"
+    name: "{{ wincom_power_plan }}"
 
-- name: Ensure upstream DNS servers are set on the adapter named {{ windows_common_win_dns_client_adapter_names }}
+- name: Ensure upstream DNS servers are set on the adapter named {{ wincom_dns_nics }}
   win_dns_client:
-   adapter_names: "{{ windows_common_win_dns_client_adapter_names }}"
-   ipv4_addresses: "{{ windows_common_win_dns_client_ipv4_addresses }}"
+   adapter_names: "{{ wincom_dns_nics }}"
+   ipv4_addresses: "{{ wincom_dns_servers }}"
 
-- name: Ensure hostname is set to {{ windows_common_win_hostname_name }}
+- name: Ensure hostname is set to {{ wincom_hostname }}
   win_hostname:
-    name: "{{ windows_common_win_hostname_name }}"
+    name: "{{ wincom_hostname }}"
   register: rename
 
 - name: Reboot

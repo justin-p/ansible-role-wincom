@@ -1,21 +1,8 @@
 ---
 # defaults file for configure-lab/win-common
-
-# win_chocolatey
-windows_common_win_chocolatey_name: "{{ wincom_choco_packages }}"
-
-# win_service
-windows_common_win_service_delayed_required: "{{ wincom_service_delayed }}"
-
-# win_psmodule
-windows_common_win_psmodule_required: "{{ wincom_required_psmodule }}"
-
-# win_power_plan
-windows_common_win_power_plan: "{{ wincom_power_plan }}"
-
-# win_dns_client
-windows_common_win_dns_client_adapter_names: "{{ wincom_dns_nics }}"
-windows_common_win_dns_client_ipv4_addresses: "{{ wincom_dns_servers }}" 
-
-# win_hostname
-windows_common_win_hostname_name: "{{ wincom_hostname }}"
+wincom_required_psmodule: [xPSDesiredStateConfiguration, NetworkingDsc, ComputerManagementDsc]
+wincom_service_delayed: [WinRM]
+wincom_power_plan: "high performance"
+wincom_dns_nics: "*"
+wincom_dns_servers: [8.8.8.8, 8.8.4.4]
+wincom_hostname: "{{ inventory_hostname }}"

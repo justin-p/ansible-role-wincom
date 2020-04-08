@@ -28,17 +28,16 @@ If you want to change any variables overwrite the ones listed in `vars/main.yml`
 
 | Variable                         | Default value                       |
 |:---------------------------------|:------------------------------------|
-| wincom_choco_packages            | [BGInfo]                            |
-| wincom_service_delayed           | [WinRM, NlaSvc]                     |
 | wincom_required_psmodule         | [xPSDesiredStateConfiguration, NetworkingDsc, ComputerManagementDsc] |
+| wincom_service_delayed           | [WinRM]                             |
 | wincom_power_plan                | "high performance"                  |
-| wincom_dns_nics                  | "Ethernet"                          |
+| wincom_dns_nics                  | "*"                                 |
 | wincom_dns_server                | [8.8.8.8, 8.8.4.4]                  |
 | wincom_hostname                  | "{{ inventory_hostname }}"          |
 
 ## Dependencies
 
-N/A
+WinRM on the windows host should configured for Ansible.
 
 ## Example Playbook
 
