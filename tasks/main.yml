@@ -18,7 +18,7 @@
 
 - name: Ensure that required services are set to start when the system has settled
   win_service:
-    name: WinRM
+    name: "{{ item }}"
     start_mode: delayed
   with_items: "{{ wincom_service_delayed }}"
 

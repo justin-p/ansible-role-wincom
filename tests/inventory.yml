@@ -22,7 +22,9 @@ all:
         #  vagrant_box: jborean93/WindowsServer2008-x64
         #Server2008x86:
         #  ansible_host: 192.168.62.10
-        #  vagrant_box: jborean93/WindowsServer2008-x86          
+        #  vagrant_box: jborean93/WindowsServer2008-x86
+      vars:
+        wincom_dns_nics: "Ethernet 2"
   vars:
     ansible_user: vagrant
     ansible_password: vagrant

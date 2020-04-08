@@ -1,6 +1,0 @@
----
-# handlers file for configure-lab/win-common
-- name: Reboot if upgrade win_chocolatey_install requires it
-  win_reboot:
-    post_reboot_delay: 300
-  when: choco_install.changed and choco_install.rc == 3010
