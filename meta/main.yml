@@ -16,5 +16,5 @@ galaxy_info:
      - 2016
      - 2019
   galaxy_tags: ["windows", "common"]
-dependencies: 
+dependencies:
   - justin_p.posh5
