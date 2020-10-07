@@ -1,5 +1,6 @@
 # ansible-role-wincom
 
+![Github Actions](https://img.shields.io/github/workflow/status/justin-p/ansible-role-wincom/CI?label=Github%20Actions&logo=github&style=flat-square)
 ![Travis](https://img.shields.io/travis/justin-p/ansible-role-wincom?label=Travis&logo=travis&style=flat-square)
 
 This role helps simplifying some basis common tasks for a windows host deployment.
