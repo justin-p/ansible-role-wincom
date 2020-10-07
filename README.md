@@ -24,16 +24,16 @@ Not tested (yet) on:
 
 ## Role Variables
 
-### `defaults/main.yml`
+`defaults/main.yml`
 
-| Variable                         | Default value                       |
-|:---------------------------------|:------------------------------------|
-| wincom_required_psmodule         | [xPSDesiredStateConfiguration, NetworkingDsc, ComputerManagementDsc] |
-| wincom_service_delayed           | [WinRM]                             |
-| wincom_power_plan                | "high performance"                  |
-| wincom_dns_nics                  | "*"                                 |
-| wincom_dns_server                | [8.8.8.8, 8.8.4.4]                  |
-| wincom_hostname                  | "{{ inventory_hostname }}"          |
+| Variable                 | Description                                      | Default value                                                        |
+| :----------------------- | :----------------------------------------------- | :------------------------------------------------------------------- |
+| wincom_required_psmodule | Powershell modules that should be installed.     | [xPSDesiredStateConfiguration, NetworkingDsc, ComputerManagementDsc] |
+| wincom_service_delayed   | Services that should have delayed startup.       | [WinRM]                                                              |
+| wincom_power_plan        | The desired settings of the windows power plan.  | "high performance"                                                   |
+| wincom_dns_nics          | On what NIC should we update DNS.                | "\*"                                                                 |
+| wincom_dns_server        | The DNS servers to configure on the NICs.        | [8.8.8.8, 8.8.4.4]                                                   |
+| wincom_hostname          | Change the hostname of the system to this value. | "{{ inventory_hostname }}"                                           |
 
 ## Dependencies
 
