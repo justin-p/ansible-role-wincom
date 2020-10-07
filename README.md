@@ -1,4 +1,4 @@
-# ansible-wincom
+# ansible-role-wincom
 
 ![Travis](https://img.shields.io/travis/justin-p/ansible-role-wincom?label=Travis&logo=travis&style=flat-square)
 
