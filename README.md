@@ -1,6 +1,6 @@
 # ansible-wincom
 
-![Travis CI](https://img.shields.io/travis/justin-p/ansible-wincom?style=flat-square)
+![Travis](https://img.shields.io/travis/justin-p/ansible-role-wincom?label=Travis&logo=travis&style=flat-square)
 
 This role helps simplifying some basis common tasks for a windows host deployment.
 
