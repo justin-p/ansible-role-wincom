@@ -1,7 +1,9 @@
 # ansible-role-wincom
 
-![Github Actions](https://img.shields.io/github/workflow/status/justin-p/ansible-role-wincom/CI?label=Github%20Actions&logo=github&style=flat-square)
-![Travis](https://img.shields.io/travis/justin-p/ansible-role-wincom?label=Travis&logo=travis&style=flat-square)
+[![Ansible Role Name](https://img.shields.io/ansible/role/51182?label=Role%20Name&logo=ansible&style=flat-square)](https://galaxy.ansible.com/justin_p/wincom)
+[![Ansible Quality Score](https://img.shields.io/ansible/quality/51182?label=Ansible%20Quality%20Score&logo=ansible&style=flat-square)](https://galaxy.ansible.com/justin_p/wincom)
+[![Ansible Role Downloads](https://img.shields.io/ansible/role/d/51182?label=Ansible%20Role%20Downloads&logo=ansible&style=flat-square)](https://galaxy.ansible.com/justin_p/wincom)
+[![Github Actions](https://img.shields.io/github/workflow/status/justin-p/ansible-role-wincom/CI?label=Github%20Actions&logo=github&style=flat-square)](https://github.com/justin-p/ansible-role-wincom/actions)
 
 This role helps simplifying some basis common tasks for a windows host deployment.
 
