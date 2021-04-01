@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: wincom
+  namespace: justin_p  
   author: Justin Perdok
   description: This role helps simplifying some basis common tasks for a windows host deployment.
   company: Orange Cyberdefense
