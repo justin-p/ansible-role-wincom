@@ -46,7 +46,8 @@ Not tested (yet) on:
 
     - hosts: windowshosts
       roles:
-         - { role: justin_p.wincom }
+         - role: justin_p.posh5
+         - role: justin_p.wincom
 
 ## Local Development
 
