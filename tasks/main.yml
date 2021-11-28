@@ -1,5 +1,5 @@
 ---
-# tasks file for configure-lab/win-common
+# tasks file for ansible-role-wincom
 - name: Assert mandatory variables have been set
   assert: { that: "{{ item }} is defined" }
   with_items:
@@ -31,7 +31,7 @@
    adapter_names: "{{ wincom_dns_nics }}"
    ipv4_addresses: "{{ wincom_dns_servers }}"
 
-- name: Ensure hostname is set to {{ wincom_hostname }}
+- name: Ensure hostname is set correctly
   win_hostname:
     name: "{{ wincom_hostname }}"
   register: rename
