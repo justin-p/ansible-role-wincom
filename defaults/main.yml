@@ -1,5 +1,5 @@
 ---
-# defaults file for configure-lab/win-common
+# defaults file for ansible-role-wincom
 wincom_required_psmodule: [xPSDesiredStateConfiguration, NetworkingDsc, ComputerManagementDsc]
 wincom_service_delayed: [WinRM]
 wincom_power_plan: "high performance"
