@@ -1,7 +1,7 @@
 ---
 # tasks file for ansible-role-wincom
 - name: Assert mandatory variables have been set
-  assert: { that: "{{ item }} is defined" }
+  ansible.builtin.assert: { that: "{{ item }} is defined" }
   with_items:
     - wincom_required_psmodule
     - wincom_service_delayed
@@ -11,31 +11,31 @@
     - wincom_hostname
 
 - name: Ensure that required DSC resources and Powershell Modules are present
-  win_psmodule:
+  ansible.windows.win_psmodule:
     name: "{{ item }}"
     state: present
   with_items: "{{ wincom_required_psmodule }}"
 
 - name: Ensure that required services are set to start when the system has settled
-  win_service:
+  ansible.windows.win_service:
     name: "{{ item }}"
     start_mode: delayed
   with_items: "{{ wincom_service_delayed }}"
 
 - name: Ensure we use the {{ wincom_power_plan }} power plan
-  win_power_plan:
+  ansible.windows.win_power_plan:
     name: "{{ wincom_power_plan }}"
 
 - name: Ensure upstream DNS servers are set on the adapter named {{ wincom_dns_nics }}
-  win_dns_client:
+  ansible.windows.win_dns_client:
    adapter_names: "{{ wincom_dns_nics }}"
    ipv4_addresses: "{{ wincom_dns_servers }}"
 
 - name: Ensure hostname is set correctly
-  win_hostname:
+  ansible.windows.win_hostname:
     name: "{{ wincom_hostname }}"
   register: rename
 
 - name: Reboot
-  win_reboot:
+  ansible.windows.win_reboot:
   when: rename.reboot_required
