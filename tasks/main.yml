@@ -11,7 +11,7 @@
     - wincom_hostname
 
 - name: Ensure that required DSC resources and Powershell Modules are present
-  community.windows.win_psmodule::
+  community.windows.win_psmodule:
     name: "{{ item }}"
     accept_license: true
     state: present
@@ -23,8 +23,8 @@
     start_mode: delayed
   with_items: "{{ wincom_service_delayed }}"
 
-- name: Ensure we use the {{ wincom_power_plan }} power plan
-  ansible.windows.win_power_plan:
+- name: "Ensure we use the {{ wincom_power_plan }} power plan"
+  community.windows.win_power_plan:
     name: "{{ wincom_power_plan }}"
 
 - name: Ensure upstream DNS servers are set on the adapter named {{ wincom_dns_nics }}
