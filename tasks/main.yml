@@ -1,14 +1,14 @@
 ---
 # tasks file for ansible-role-wincom
 - name: Assert mandatory variables have been set
-  ansible.builtin.assert: { that: "{{ item }} is defined" }
-  with_items:
-    - wincom_required_psmodule
-    - wincom_service_delayed
-    - wincom_power_plan
-    - wincom_dns_nics
-    - wincom_dns_servers
-    - wincom_hostname
+  ansible.builtin.assert:
+    that:
+      - wincom_required_psmodule is defined
+      - wincom_service_delayed is defined
+      - wincom_power_plan is defined
+      - wincom_dns_nics is defined
+      - wincom_dns_servers is defined
+      - wincom_hostname is defined
 
 - name: Ensure that required DSC resources and Powershell Modules are present
   community.windows.win_psmodule:
